@@ -3,16 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <TextView
+        android:id="@+id/btDeviceName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btDeviceName" />
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/btDeviceAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btDeviceAddress" />
+        android:textStyle="italic" />
 
 </LinearLayout>

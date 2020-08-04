@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -29,10 +30,11 @@ public class DeviceListAdapter extends ArrayAdapter<Device> {
         this.mDevices = devices;
     }
 
+    @NonNull
     public View getView(int position, View convertView, ViewGroup parent) {
         Log.d(TAG, "getView: Inflating");
         LayoutInflater inflater = mContext.getLayoutInflater();
-        View rowView = inflater.inflate(mViewResourceId, null, true);
+        @SuppressLint("ViewHolder") View rowView = inflater.inflate(mViewResourceId, null, true);
 
         if (mDevices.get(position) != null) {
             TextView deviceName = (TextView) rowView.findViewById(R.id.btDeviceName);
@@ -48,5 +50,7 @@ public class DeviceListAdapter extends ArrayAdapter<Device> {
         return rowView;
     }
 
-    public set
+//    public Device getDevice(int position){
+//
+//    }
 }
