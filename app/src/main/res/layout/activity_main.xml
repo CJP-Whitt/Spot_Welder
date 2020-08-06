@@ -28,7 +28,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="88dp">
+        android:layout_height="88dp"
+        android:background="#939E9E">
 
         <Button
             android:id="@+id/scanButton"
@@ -40,8 +41,7 @@
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/button_corners"
-            android:backgroundTint="#21D0E6"
+            android:background="@drawable/scan_button"
             android:fontFamily="monospace"
             android:gravity="center"
             android:lineSpacingExtra="8sp"
@@ -59,8 +59,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/button_corners"
-            android:backgroundTint="#1DD125"
+            android:background="@drawable/connect_button"
             android:fontFamily="monospace"
             android:text="CONNECT"
             android:textSize="18sp"
@@ -76,7 +75,12 @@
         <ListView
             android:id="@+id/deviceList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:dividerHeight="2dp"
+            android:listSelector="#811DD125"/>
     </LinearLayout>
 
 

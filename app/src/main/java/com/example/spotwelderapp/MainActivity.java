@@ -8,6 +8,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
@@ -32,14 +33,18 @@ public class MainActivity extends AppCompatActivity {
     private final static int REQUEST_ENABLE_BT = 1;
     private final static int REQUEST_ENABLE_BT_ADMIN = 2;
     private final static int REQUEST_ENABLE_FINE_LOCATION = 3;
+    private final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    public static String EXTRA_ADDRESS = "device_address";
+    private String mServiceName = "Spot Welder Phone App";
+    private int mBufferSize = 50000; //Default
     private Button scan;
     private Button connect;
     private ListView lvBTDevices;
     private String TAG = "MainActivity";
-    private String connectMACAddress = "";
+    private BluetoothDevice connectDevice;
     private BluetoothAdapter mBTAdapter;
     private DeviceListAdapter adapter;
-    private ArrayList<Device> mBTDevices = new ArrayList<>();
+    private ArrayList<BluetoothDevice> mBTDevices = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
         lvBTDevices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Device item = (Device)parent.getItemAtPosition(position);
-                Log.d(TAG, "ListView: onItemClick - Clicked *" + item.getName() + "*");
+                connectDevice =  (BluetoothDevice)parent.getItemAtPosition(position);
+                Log.d(TAG, "ListView: onItemClick - Clicked *" + connectDevice.getName() + "*");
             }
         });
         Log.d(TAG, "onCreate: Created list adapter");
@@ -79,12 +84,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "onClickListener: CONNECT button clicked");
 
-                if (connectMACAddress.equals("")){
+                if (connectDevice == null){
                     Toast.makeText(getApplicationContext(), "Select device first",
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else{
+                    Toast.makeText(getApplicationContext(), "Connecting to " + connectDevice.getName(),
+                            Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(MainActivity.this, ControllerActivity.class);
+                    i.putExtra(EXTRA_ADDRESS, connectDevice.getAddress());
+                    startActivity(i);
+
 
                 }
             }
@@ -112,16 +123,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     // Get BT boned devices
     protected void listBondedDevices(){
         Log.d(TAG, "listBondedDevices: Getting bonded devices...");
         Set<BluetoothDevice> all_devices = mBTAdapter.getBondedDevices();
         if (all_devices.size() > 0) {
             for (BluetoothDevice currentDevice : all_devices) {
-                Device device = new Device(currentDevice.getName(), currentDevice.getAddress());
-                Log.d(TAG, "listBondedDevices: appended *" + device.getName() + "*");
-                mBTDevices.add(device);
+                Log.d(TAG, "listBondedDevices: appended *" + currentDevice.getName() + "*");
+                mBTDevices.add(currentDevice);
             }
             Log.d(TAG, "listBondedDevices: Devices appended");
         }
@@ -130,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //BT exist and permissions check
-    @SuppressLint("StaticFieldLeak")
     private class ListBondedDevices extends AsyncTask<Void, Void, Void>{
         @Override
         protected Void doInBackground(Void... params) {
@@ -256,8 +264,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
         }
-
     }
+
 
     @Override
     public  void onStart() {
@@ -269,8 +277,4 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
-
-
-
-
 }
