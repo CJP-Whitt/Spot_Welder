@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,41 +26,40 @@ public class ControllerActivity extends AppCompatActivity {
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
     private boolean isBtConnected = false;
+    ConnectingDialog connectingDialog;
     //SPP UUID. Look for it
     private final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    Button uploadButton;
+    EditText etPWeld, etPause, etWeld;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Get device connectiona mac address from intent
+        // Get device connection mac address from intent
         Intent newInt = getIntent();
         address = newInt.getStringExtra(MainActivity.EXTRA_ADDRESS);
 
         setContentView(R.layout.activity_controller);
 
-        Button btOn = (Button)findViewById(R.id.onButton);
-        Button btOff = (Button)findViewById(R.id.offButton);
+        uploadButton = (Button)findViewById(R.id.uploadButton);
+        etPWeld = (EditText)findViewById(R.id.etPreweld);
+        etPause = (EditText)findViewById(R.id.etPause);
+        etWeld = (EditText)findViewById(R.id.etWeld);
 
+        connectingDialog = new ConnectingDialog(ControllerActivity.this);
+        connectingDialog.startConnectingDialog();
 
-
-        btOn.setOnClickListener(new View.OnClickListener() {
+        uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                turnOnLed("1");
-            }
-        });
-        btOff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                turnOffLed("0");
+                uploadSettings();
             }
         });
 
         // Set up edit texts and image
 
         new ConnectBT().execute();
-
 
     }
 
@@ -90,6 +92,48 @@ public class ControllerActivity extends AppCompatActivity {
                 Log.d(TAG, "turnOffLed: Could not get btSocket outStream");
             }
         }
+    }
+
+    private void downloadSettings() {
+        if (btSocket != null) {
+            // Get settings from text views, check ranges
+            int tempPWeld = Integer.parseInt(etPWeld.getText().toString());
+            int tempPause = Integer.parseInt(etPause.getText().toString());
+            int tempWeld = Integer.parseInt(etWeld.getText().toString());
+
+            if (!isSettingsOkay()) {
+                Toast.makeText(this, "Only enter values from 0 to 999...retry", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            try {
+                btSocket.getOutputStream().write("".getBytes());
+            } catch (IOException e) {
+                Log.d(TAG, "downloadSettings: Could not get btSocket outStream");
+            }
+        }
+    }
+
+    private void uploadSettings() {
+
+
+    }
+
+    private boolean isSettingsOkay() {
+        Log.d(TAG, "isSettingsOkay: Checking setting values...");
+        boolean functReturn = true;
+
+        int tempPWeld = Integer.parseInt(etPWeld.getText().toString());
+        int tempPause = Integer.parseInt(etPause.getText().toString());
+        int tempWeld = Integer.parseInt(etWeld.getText().toString());
+
+        if (tempPWeld < 0 || tempPWeld > 999){
+            Log.d(TAG, "isSettingsOkay: PWeld value out of bounds");
+            etPWeld.setBackgroundColor(123);
+
+        }
+
+
     }
 
 
@@ -134,13 +178,16 @@ public class ControllerActivity extends AppCompatActivity {
             if (!ConnectSuccess)
             {
                 Log.d(TAG, "ConnectBT/onPostExecute: failure to connect to BT, ending");
+                connectingDialog.dismissDialog();
+                Toast.makeText(getApplicationContext(), "Connection failed", Toast.LENGTH_SHORT).show();
                 finish();
             }
             else
             {
                 Log.d(TAG, "ConnectBT/onPostExecute: Connected!");
-
                 isBtConnected = true;
+                connectingDialog.dismissDialog();
+                Toast.makeText(getApplicationContext(), "Connection successful", Toast.LENGTH_SHORT).show();
             }
         }
     }

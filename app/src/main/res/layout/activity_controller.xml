@@ -8,7 +8,6 @@
     android:visibility="visible">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +17,8 @@
             android:id="@+id/tvPreWeld"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Preweld Time (ms):" />
+            android:text="Preweld Time (ms):"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/etPreweld"
@@ -27,6 +27,7 @@
             android:ems="10"
             android:inputType="number" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +37,8 @@
             android:id="@+id/tvPauuse"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Pause Time (ms):" />
+            android:text="Pause Time (ms):"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/etPause"
@@ -45,6 +47,7 @@
             android:ems="10"
             android:inputType="number" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +57,8 @@
             android:id="@+id/tvWeld"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Weld Time (ms):" />
+            android:text="Weld Time (ms):"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/etWeld"
@@ -63,20 +67,18 @@
             android:ems="10"
             android:inputType="number" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <Button
-        android:id="@+id/onButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LEDs ON" />
-        <Button
-            android:id="@+id/offButton"
+            android:id="@+id/uploadButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LEDs OFF" />
+            android:text="UPLOAD SETTINGS" />
+
     </LinearLayout>
 
     <ImageView

@@ -90,8 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Connecting to " + connectDevice.getName(),
-                            Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "onClickListener: Connecting to " + connectDevice.getName());
                     Intent i = new Intent(MainActivity.this, ControllerActivity.class);
                     i.putExtra(EXTRA_ADDRESS, connectDevice.getAddress());
                     startActivity(i);
