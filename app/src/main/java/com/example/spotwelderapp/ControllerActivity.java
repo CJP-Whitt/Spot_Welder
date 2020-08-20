@@ -110,6 +110,12 @@ public class ControllerActivity extends AppCompatActivity {
         Log.d(TAG, "uploadSettings: Uploading welding settings");
 
         if (btSocket != null) {
+            // Check bluetooth device still connected
+            if (!btSocket.isConnected()){
+                Toast.makeText(this, "Upload failed...device not connected", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+
             // Get settings from text views, check ranges
             String tempPWeld = etPWeld.getText().toString();
             String tempPause = etPause.getText().toString();
@@ -127,7 +133,7 @@ public class ControllerActivity extends AppCompatActivity {
             try {
                 btSocket.getOutputStream().write(paramsArrayStr.getBytes());
                 Log.d(TAG, "uploadSettings: BT data sent");
-                Toast.makeText(this, "Upload successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Upload successful!", Toast.LENGTH_SHORT).show();
 
 
             } catch (IOException e) {
@@ -210,6 +216,12 @@ public class ControllerActivity extends AppCompatActivity {
             String readMessage = "";
 
             if (btSocket != null) {
+                // Check that
+                if (!btSocket.isConnected()){
+                    Toast.makeText(mContext, "Read failed...device not connected", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+
                 // Send code 100, then receive string
                 try {
                     btSocket.getOutputStream().write("100".getBytes());
@@ -285,6 +297,7 @@ public class ControllerActivity extends AppCompatActivity {
             etPWeld.setText(paramsArr[0]);
             etPause.setText(paramsArr[1]);
             etWeld.setText(paramsArr[2]);
+            Toast.makeText(mContext, "Download successful!", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "DownloadSettings: DONE");
         }
     }
