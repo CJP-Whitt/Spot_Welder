@@ -3,6 +3,7 @@ DIY spot welder from old microwave for making Li-ion 18650 packs with nickel str
 Uses bluetooth communication in custom Android app to adjust welding parameters.
 
 Video of welder in use (plus how strong welds can be): https://www.youtube.com/watch?v=DYY4uMhj9es&ab_channel=whittyman
+
 Photos of build progression(Google photos): https://photos.app.goo.gl/j9NsPbFjYHL5vnTS6
 
 # Spot Welder Controller Android Application
