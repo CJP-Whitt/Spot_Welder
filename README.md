@@ -2,6 +2,7 @@
 DIY spot welder from old microwave for making Li-ion 18650 packs with nickel strips.
 Uses bluetooth communication in custom Android app to adjust welding parameters.
 
+Video of welder in use (plus how strong welds can be): https://www.youtube.com/watch?v=DYY4uMhj9es&ab_channel=whittyman
 Photos of build progression(Google photos): https://photos.app.goo.gl/j9NsPbFjYHL5vnTS6
 
 # Spot Welder Controller Android Application
@@ -12,7 +13,9 @@ APK Download Link V1.0 -->
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
 
 # Finished Project
-### _Max Current Output: ~550 Amps, Max Current Draw: 35 Amps, Secondary Coil Output:7 Volts, Primary Coil Resistance: 0.4 Ohms_
+### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
+
+<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=45% width=45%> <img src="SpotWelder_Photos/batteryExample.jpg" height=45% width=45%></p>
 
 
 
@@ -44,12 +47,20 @@ To get the right output current from this transformer for spot welding (high cur
 ### Step Three: Getting a shell
 For the shell I used an old power supply casing for a server power supply. It worked quite nicely. I would definitely suggest having a metal casing so you can ground it and not have to worry about being electrocuted.
 
-<p align="center"><img src=”SpotWelder_Photos/20200725_133812.jpg" height=45% width=45%> <img src="SpotWelder_Photos/20200912_155530.jpg" height=45% width=45%></p>
+<p align="center"><img src="SpotWelder_Photos/20200725_133812.jpg" height=45% width=45%> <img src="SpotWelder_Photos/20200912_155530.jpg" height=45% width=45%></p>
 
 ### Step Four: Wiring and completion
 Here is a amatuer wiring diagram I created along with an image of the inside of the finished Spot Welder.
 
-<p align="center"><img src=”SpotWelder_Photos/Wiring%20Diagram%20Final.jpg" height=45% width=45%> <img src="SpotWelder_Photos/20200912_162733.jpg" height=45% width=45%></p>
+<p align="center"><img src="SpotWelder_Photos/Wiring%20Diagram%20Final.jpg" height=45% width=45%> <img src="SpotWelder_Photos/20200912_162733.jpg" height=45% width=45%></p>
+
+## Finished Project
+Here it is all done (Except its missing new tips that I bought, but I listed them in the components section). It works great and the app gives amazing room for adjusting parameters. I’ve already successfully welded two 13s3p battery packs using this.
+
+<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=45% width=45%> <img src="SpotWelder_Photos/batteryExample.jpg" height=45% width=45%></p>
+
+
+
 
 
 
