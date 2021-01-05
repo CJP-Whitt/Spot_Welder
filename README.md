@@ -42,7 +42,7 @@ Do your research! I do not take responsibility for any issues you may encounter 
 ## Build Progression
 
 ### Step One: Getting the right transformer
-You need a big enough transformer for this to work. My first transformer I got of 500W wasn’t powerful enough. I got another one from an old microwave that was 800W and that one was perfect. Here you can see them side by side. Bigger one is 800W.
+You need a big enough transformer for this to work. My first transformer I got of 750W wasn’t powerful enough. I got another one from an old microwave that was 1000W and that one was perfect. Here you can see them side by side. Bigger one is 1000W.
 
 <p align="center"><img src="SpotWelder_Photos/20200905_143613.jpg" height=45% width=45%> <img src="SpotWelder_Photos/20200905_143610.jpg" height=45% width=45%></p>
 
