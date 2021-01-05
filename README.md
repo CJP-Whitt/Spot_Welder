@@ -17,7 +17,7 @@ App
 # Finished Project
 ### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
 
-<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings.jpg" height=30% width=30%></p>
+<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings.jpg" height=5% width=30%></p>
 
 
 
@@ -59,4 +59,12 @@ Here is a amatuer wiring diagram I created along with an image of the inside of 
 # App Details
 
 The app connects to the
+
+
+
+
+
+
+
+
 
