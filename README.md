@@ -17,11 +17,12 @@ Do your research! I do not take responsibility for any issues you may encounter 
 [Components](#components)  
 [Spot Welder Build Progression](#build-progression)  
 [Spot Welder Settings App](#app-details)  
+[Arduino Firmware](#arduino-details)
 
 # Finished Project
 ### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
 
-<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=30% width=30%></p>
+<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30% align="center"><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30% align="center"><img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=30% width=30% align="center"></p>
 
 
 
@@ -61,7 +62,11 @@ Here is a amatuer wiring diagram I created along with an image of the inside of 
 <p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=20% width=20%></p>
 
 ## App Details
-The app connects to the BLE module connected to the arduino. It changes settings that are saved on board the arduino and get automatically loaded upon connection.
+The app connects to the BLE module connected to the arduino. It changes settings that are saved on board the arduino. Or it can load saved settings from the arduino (happens automatically on startup).
+
+
+## Arduino Details
+The arduino firmware controls the switch for the transformer based on the foot pedal and burst weld settings (3 part welding process), and it also holds the stored settings from previous use. The welding process has 3 parts, an initial short ON heating phase, then a short OFF phase and then to finish a long ON phase for completing the actual welding.
 
 
 
