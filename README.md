@@ -2,8 +2,7 @@
 DIY spot welder from old microwave for making Li-ion 18650 packs with nickel strips.
 Uses bluetooth communication in custom Android app to adjust welding parameters.
 
-Video of welder in use (plus how strong welds can be): https://www.youtube.com/watch?v=DYY4uMhj9es&ab_channel=whittyman
-
+Video of welder in use (plus how strong welds can be): https://www.youtube.com/watch?v=DYY4uMhj9es&ab_channel=whittyman \n
 Photos of build progression (Google photos): https://photos.app.goo.gl/j9NsPbFjYHL5vnTS6
 
 # Spot Welder Controller Android Application
@@ -15,9 +14,9 @@ APK Download Link V1.0 -->
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
 
 # Sections
-[Components](##components)
-[Spot Welder Build Progression](##build-progression)
-[Spot Welder Settings App](##app-details)
+[Components](##components)\n
+[Spot Welder Build Progression](##build-progression)\n
+[Spot Welder Settings App](##app-details)\n
 
 # Finished Project
 ### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
