@@ -14,10 +14,10 @@ APK Download Link V1.0 -->
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
 
 # Sections
-[Components](#components)  
-[Spot Welder Build Progression](#build-progression)  
-[Spot Welder Settings App](#app-details)  
-[Arduino Firmware](#arduino-details)
+- [Components](#components)  
+- [Spot Welder Build Progression](#build-progression)  
+- [Spot Welder Settings App](#app-details)  
+- [Arduino Firmware](#arduino-details)  
 
 # Finished Project
 ### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
