@@ -2,8 +2,9 @@
 DIY spot welder from old microwave for making Li-ion 18650 packs with nickel strips.
 Uses bluetooth communication in custom Android app to adjust welding parameters.
 
--Video of welder in use (plus how strong welds can be): https://www.youtube.com/watch?v=DYY4uMhj9es&ab_channel=whittyman
--Photos of build progression(Google photos): https://photos.app.goo.gl/j9NsPbFjYHL5vnTS6
+Video of welder in use (plus how strong welds can be): https://www.youtube.com/watch?v=DYY4uMhj9es&ab_channel=whittyman
+
+Photos of build progression (Google photos): https://photos.app.goo.gl/j9NsPbFjYHL5vnTS6
 
 # Spot Welder Controller Android Application
 Android App for changing welding parameters to get ideal weld
@@ -13,16 +14,19 @@ APK Download Link V1.0 -->
 # Disclaimer!
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
 
-App 
+# Sections
+[Components](##components)
+[Spot Welder Build Progression](##build-progression)
+[Spot Welder Settings App](##app-details)
 
 # Finished Project
 ### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
 
-<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=5% width=30%></p>
+<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=30% width=30%></p>
 
 
 
-# Components
+## Components
 1.) AC relay: https://www.amazon.com/SSR-25-DC-AC-Solid-State-Relay/dp/B07FVR37QN/ref=asc_df_B07FVR37QN/?tag=hyprod-20&linkCode=df0&hvadid=241981127743&hvpos=&hvnetw=g&hvrand=4879242449231644932&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1014046&hvtargid=pla-491197756319&psc=1
 2.) Adafruit ItsyBitsy Express M0: https://www.adafruit.com/product/3727?TB_iframe=true&width=370.8&height=658.8&gclid=CjwKCAjwj975BRBUEiwA4whRB6nMeZW6CoCGW8aRVygc7-Xtg-h9TDTFs4siPeOmugG5i7zrmi4TFxoCCz0QAvD_BwE
 3.) Foot pedal switch:  https://www.amazon.com/URBEST-Momentary-Industrial-Anti-skid-Surface/dp/B01LXTEQ1C?ref_=Oct_s9_apbd_orecs_hd_bw_b6GQDoh&pf_rd_r=16WVGR2Q911JSCNT49GM&pf_rd_p=5676cbc1-b5ad-5265-92cb-2bb87719d56c&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=5739468011
@@ -35,7 +39,7 @@ App
 10.) Crimp on terminal lugs
 11.) Some kind of insulation for electrical connections
 
-# Build Progression
+## Build Progression
 
 ### Step One: Getting the right transformer
 You need a big enough transformer for this to work. My first transformer I got of 500W wasn’t powerful enough. I got another one from an old microwave that was 800W and that one was perfect. Here you can see them side by side. Bigger one is 800W.
@@ -57,7 +61,7 @@ Here is a amatuer wiring diagram I created along with an image of the inside of 
 
 <p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=20% width=20%></p>
 
-# App Details
+## App Details
 
 The app connects to the
 
