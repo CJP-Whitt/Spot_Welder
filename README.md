@@ -6,8 +6,9 @@ Uses bluetooth communication in custom Android app to adjust welding parameters.
 -Photos of build progression(Google photos): https://photos.app.goo.gl/j9NsPbFjYHL5vnTS6
 
 # Spot Welder Controller Android Application
-Android App for changing welding parameters to get ideal weld.
+Android App for changing welding parameters to get ideal weld
 APK Download Link V1.0 --> 
+
 
 # Disclaimer!
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
@@ -17,7 +18,7 @@ App
 # Finished Project
 ### _Max Current Output: ~550 Amps, Max Current Draw: ~35 Amps, Secondary Coil Output: ~7 Volts, Primary Coil Resistance: 0.4 Ohms_
 
-<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings.jpg" height=5% width=30%></p>
+<p align="center"><img src="SpotWelder_Photos/firstUse.jpg" height=30% width=30%><img src="SpotWelder_Photos/batteryExample.jpg" height=30% width=30%><img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=5% width=30%></p>
 
 
 
@@ -54,7 +55,7 @@ For the shell I used an old power supply casing for a server power supply. It wo
 ### Step Four: Wiring and completion
 Here is a amatuer wiring diagram I created along with an image of the inside of the finished Spot Welder.
 
-<p align="center"><img src="SpotWelder_Photos/spotWelderApp.jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings.jpg" height=20% width=20%></p>
+<p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=20% width=20%></p>
 
 # App Details
 
