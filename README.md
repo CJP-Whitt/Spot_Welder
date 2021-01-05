@@ -27,17 +27,17 @@ Do your research! I do not take responsibility for any issues you may encounter 
 
 
 ## Components
-1.) AC relay: https://www.amazon.com/SSR-25-DC-AC-Solid-State-Relay/dp/B07FVR37QN/ref=asc_df_B07FVR37QN/?tag=hyprod-20&linkCode=df0&hvadid=241981127743&hvpos=&hvnetw=g&hvrand=4879242449231644932&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1014046&hvtargid=pla-491197756319&psc=1
-2.) Adafruit ItsyBitsy Express M0: https://www.adafruit.com/product/3727?TB_iframe=true&width=370.8&height=658.8&gclid=CjwKCAjwj975BRBUEiwA4whRB6nMeZW6CoCGW8aRVygc7-Xtg-h9TDTFs4siPeOmugG5i7zrmi4TFxoCCz0QAvD_BwE
-3.) Foot pedal switch:  https://www.amazon.com/URBEST-Momentary-Industrial-Anti-skid-Surface/dp/B01LXTEQ1C?ref_=Oct_s9_apbd_orecs_hd_bw_b6GQDoh&pf_rd_r=16WVGR2Q911JSCNT49GM&pf_rd_p=5676cbc1-b5ad-5265-92cb-2bb87719d56c&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=5739468011
-4.) HC-05 bluetooth module: https://www.amazon.com/Wireless-Bluetooth-Receiver-Transceiver-Transmitter/dp/B01MQKX7VP/ref=asc_df_B01MQKX7VP/?tag=hyprod-20&linkCode=df0&hvadid=167146065113&hvpos=&hvnetw=g&hvrand=238541489054862162&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1014046&hvtargid=pla-362748457327&psc=1
+1.) AC relay: https://www.amazon.com/SSR-25-DC-AC-Solid-State-Relay/dp/B07FVR37QN/ref=asc_df_B07FVR37QN/?tag=hyprod-20&linkCode=df0&hvadid=241981127743&hvpos=&hvnetw=g&hvrand=4879242449231644932&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1014046&hvtargid=pla-491197756319&psc=1  
+2.) Adafruit ItsyBitsy Express M0: https://www.adafruit.com/product/3727?TB_iframe=true&width=370.8&height=658.8&gclid=CjwKCAjwj975BRBUEiwA4whRB6nMeZW6CoCGW8aRVygc7-Xtg-h9TDTFs4siPeOmugG5i7zrmi4TFxoCCz0QAvD_BwE  
+3.) Foot pedal switch:  https://www.amazon.com/URBEST-Momentary-Industrial-Anti-skid-Surface/dp/B01LXTEQ1C?ref_=Oct_s9_apbd_orecs_hd_bw_b6GQDoh&pf_rd_r=16WVGR2Q911JSCNT49GM&pf_rd_p=5676cbc1-b5ad-5265-92cb-2bb87719d56c&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=5739468011  
+4.) HC-05 bluetooth module: https://www.amazon.com/Wireless-Bluetooth-Receiver-Transceiver-Transmitter/dp/B01MQKX7VP/ref=asc_df_B01MQKX7VP/?tag=hyprod-20&linkCode=df0&hvadid=167146065113&hvpos=&hvnetw=g&hvrand=238541489054862162&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1014046&hvtargid=pla-362748457327&psc=1  
 5.) Wall outlet usb charger (basically any work...make sure output voltage isn't too high)
-6.) Microwave transformer (From my experience 750W is not enough, try to find at least a 1000W one)
-7.) Welding cable 2/0GA
-8.) Outlet plug and cable (preferably with ground wire, take from microwave you disassemble)
-9.) Welding tips: https://www.amazon.com/gp/product/B085FTFLMQ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
-10.) Crimp on terminal lugs
-11.) Some kind of insulation for electrical connections
+6.) Microwave transformer (From my experience 750W is not enough, try to find at least a 1000W one)  
+7.) Welding cable 2/0GA  
+8.) Outlet plug and cable (preferably with ground wire, take from microwave you disassemble)  
+9.) Welding tips: https://www.amazon.com/gp/product/B085FTFLMQ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1  
+10.) Crimp on terminal lugs  
+11.) Some kind of insulation for electrical connections  
 
 ## Build Progression
 
