@@ -54,7 +54,7 @@ For the shell I used an old power supply casing for a server power supply. It wo
 ### Step Four: Wiring and completion
 Here is a amatuer wiring diagram I created along with an image of the inside of the finished Spot Welder.
 
-<p align="center"><img src="SpotWelder_Photos/spotWelderApp.jpg" height=45% width=45%> <img src="SpotWelder_Photos/spotWelderAppSettings.jpg" height=45% width=45%></p>
+<p align="center"><img src="SpotWelder_Photos/spotWelderApp.jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings.jpg" height=20% width=20%></p>
 
 # App Details
 
