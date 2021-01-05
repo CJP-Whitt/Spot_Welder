@@ -64,7 +64,7 @@ Here is a amatuer wiring diagram I created along with an image of the inside of 
 ## App Details
 The app connects to the BLE module connected to the arduino. It changes settings that are saved on board the arduino. Or it can load saved settings from the arduino (happens automatically on startup).
 
-<p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=20% width=20%></p>
+<p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=45% width=45%> <img src="SpotWelder_Photos/finalInternals.jpg" height=40% width=40%></p>
 
 
 ## Arduino Details
