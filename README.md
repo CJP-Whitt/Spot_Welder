@@ -59,10 +59,12 @@ For the shell I used an old power supply casing for a server power supply. It wo
 ### Step Four: Wiring and completion
 Here is a amatuer wiring diagram I created along with an image of the inside of the finished Spot Welder.
 
-<p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=20% width=20%></p>
+<p align="center"><img src="SpotWelder_Photos/Wiring%20Diagram%20Final.jpg" height=20% width=20%> <img src="SpotWelder_Photos/firstUse.jpg" height=20% width=20%></p>
 
 ## App Details
 The app connects to the BLE module connected to the arduino. It changes settings that are saved on board the arduino. Or it can load saved settings from the arduino (happens automatically on startup).
+
+<p align="center"><img src="SpotWelder_Photos/spotWelderApp%20(2).jpg" height=20% width=20%> <img src="SpotWelder_Photos/spotWelderAppSettings%20(2).jpg" height=20% width=20%></p>
 
 
 ## Arduino Details
