@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClickListener: SCAN button clicked");
-
+                Toast.makeText(getApplicationContext(), "Pair bluetooth device in settings app",
+                        Toast.LENGTH_LONG).show();
 
             }
         });
