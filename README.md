@@ -13,6 +13,8 @@ APK Download Link V1.0 --> https://drive.google.com/file/d/1htVNx_ge1Yk_lr5TKI7O
 # Disclaimer!
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
 
+*Project relies on SPI flash chip on board the Express M0 Board, if you want to use a different board you may have to adjust code*
+
 # Sections
 - [Components](#components)  
 - [Spot Welder Build Progression](#build-progression)  
