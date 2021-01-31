@@ -7,7 +7,7 @@ Photos of build progression (Google photos): https://photos.app.goo.gl/j9NsPbFjY
 
 # Spot Welder Controller Android Application
 Android App for changing welding parameters to get ideal weld
-APK Download Link V1.0 --> 
+APK Download Link V1.0 --> https://drive.google.com/file/d/1htVNx_ge1Yk_lr5TKI7ORGdG_ZuVXLhm/view?usp=sharing
 
 
 # Disclaimer!
