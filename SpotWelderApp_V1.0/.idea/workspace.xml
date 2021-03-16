@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ee382c-5948-4fe8-87c6-8c8db4456d5b" name="Default Changelist" comment="" />
+    <list default="true" id="e0ee382c-5948-4fe8-87c6-8c8db4456d5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Spot_Welder.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../Spot_Welder.ino" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R58M21M8PJV" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-07T07:42:17.747Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-16T16:45:45.281Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -110,10 +117,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1766" y="100" width="1488" height="1240" key="AVDManager" timestamp="1610005557386">
+    <state x="2340" y="451" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1615775457347">
       <screen x="0" y="0" width="3347" height="1440" />
     </state>
-    <state x="1766" y="100" width="1488" height="1240" key="AVDManager/0.0.3347.1440@0.0.3347.1440" timestamp="1610005557386" />
+    <state x="2340" y="451" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.3347.1440@0.0.3347.1440" timestamp="1615775457347" />
+    <state x="1766" y="100" width="1488" height="1240" key="AVDManager" timestamp="1615913352620">
+      <screen x="0" y="0" width="3347" height="1440" />
+    </state>
+    <state x="1766" y="100" width="1488" height="1240" key="AVDManager/0.0.3347.1440@0.0.3347.1440" timestamp="1615913352620" />
     <state x="2011" y="365" key="SettingsEditor" timestamp="1610005633433">
       <screen x="0" y="0" width="3347" height="1440" />
     </state>

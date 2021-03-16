@@ -16,9 +16,9 @@ bool is_foot_down = false;
 bool temp_is_foot_down = false;
 
 /* Parameters, if storing larger data sets, use arrays for byte boundries */
-int pre_weld_time = 50; // Recommended 50ms
-int pause_time = 150;    // Recommended 500ms
-int weld_time = 80;     // Recommended 50-250ms
+int weld_phase_amount = 1; // Recommended 2,4,6,8 phases
+int pause_time = 150;    // Recommended 50-150ms
+int weld_time = 80;     // Recommended 20-100ms
 
 /* Bluetooth UART connection */
 Uart Serial2(&sercom4, A1, A2, SERCOM_RX_PAD_1, UART_TX_PAD_0); // A1(TX) on SERCOM4.0, A2(RX) on SERCOM4.1
@@ -137,8 +137,8 @@ void handleBTData(){  // Get command code at beginning of string
   if (code == 100)
   { // Upload welding parameters to app
     printlnDebug("\tUploading paramaters... ", 1);
-    Serial2.print("[" + String(pre_weld_time) + "," + String(pause_time) + "," + String(weld_time) + "]");
-    printlnDebug("\t\tSent [" + String(pre_weld_time) + "," + String(pause_time) + "," + String(weld_time) + "]", 1);
+    Serial2.print("[" + String(weld_phase_amount) + "," + String(pause_time) + "," + String(weld_time) + "]");
+    printlnDebug("\t\tSent [" + String(weld_phase_amount) + "," + String(pause_time) + "," + String(weld_time) + "]", 1);
     delay(1000);
   }
   else if (code == 200)
@@ -148,11 +148,11 @@ void handleBTData(){  // Get command code at beginning of string
     int params[3];
     parseStringArray(params, btString);
     
-    printlnDebug("\t\tpre_weld_time: " + String(params[0]), 1); 
+    printlnDebug("\t\tweld_phase_amount: " + String(params[0]), 1); 
     printlnDebug("\t\tpause_time: " + String(params[1]), 1); 
     printlnDebug("\t\tweld_time: " + String(params[2]), 1);
 
-    pre_weld_time = params[0];
+    weld_phase_amount = params[0];
     pause_time = params[1];
     weld_time = params[2];
 
@@ -190,7 +190,7 @@ void parseStringArray(int arr[], String encoded_array){  // Parse array string f
   int charIndex = 0;
   int paramIndex = 0;
   
-  // Skip command code
+  // Parse past command code
   while (charIndex < encoded_array.length()){
     if (encoded_array[charIndex] == ':'){
       charIndex++;
@@ -224,27 +224,22 @@ void weld() {  // Do actual spot welding action
   printlnDebug("\n\nWelding START...", 2);
   printlnDebug("\tRed LED On!", 2);
   digitalWrite(LED_R_PIN, HIGH); // Red led on
-  
-  // Pre-weld start...
-  printDebug("\t\tPre-welding...", 2);
-  digitalWrite(WELD_PIN, HIGH); 
-  delay(pre_weld_time);
-  printlnDebug("Done", 2);
-  // Pre-weld end...
 
-  // Pause start...
-  printDebug("\t\tPause...", 2);
-  digitalWrite(WELD_PIN, LOW);
-  delay(pause_time);
-  printlnDebug("Done", 2);
-  // Pause end...
+  for (int i=0; i<weld_phase_amount; i++){
+    // Weld start...
+    printDebug("\t\tWelding...", 2);
+    digitalWrite(WELD_PIN, HIGH);
+    delay(weld_time);
+    printlnDebug("\t\tWeld Done", 2);
+    // Weld end...
 
-  // Weld start...
-  printDebug("\t\tWelding...", 2);
-  digitalWrite(WELD_PIN, HIGH);
-  delay(weld_time);
-  printlnDebug("Done", 2);
-  // Weld end...
+    // Pause start...
+    printDebug("\t\tPause...", 2);
+    digitalWrite(WELD_PIN, LOW);
+    delay(pause_time);
+    printlnDebug("\t\tPause Done", 2);
+    // Pause end...
+  }
 
   digitalWrite(WELD_PIN, LOW);
   digitalWrite(LED_R_PIN, LOW); // Red led off
@@ -260,10 +255,10 @@ void loadSavedSettings(){   // Load saved settings from the on-board flash stora
   Serial.println();
   Serial.println("Reading saved settings...");
   
-  pre_weld_time = flash.readWord(0);
+  weld_phase_amount = flash.readWord(0);
   pause_time = flash.readWord(2);
   weld_time = flash.readWord(4);
-  Serial.print("\tPre Weld Time: \t "); Serial.println(pre_weld_time);
+  Serial.print("\tWeld Phase Amount: \t "); Serial.println(weld_phase_amount);
   Serial.print("\tPause Time: \t "); Serial.println(pause_time);
   Serial.print("\tWeld Time: \t "); Serial.println(weld_time);
   
@@ -276,14 +271,14 @@ void saveLocalSettings(){   // Write current local settings to on-board flash st
   Serial.println();
   Serial.println();
   Serial.println("Writing local settings...");
-  Serial.print("\tPre Weld Time: \t "); Serial.println(pre_weld_time);
+  Serial.print("\ttWeld Phase Amount: \t "); Serial.println(weld_phase_amount);
   Serial.print("\tPause Time: \t "); Serial.println(pause_time);
   Serial.print("\tWeld Time: \t "); Serial.println(weld_time);
   flash.eraseSection(0, 6);
-  if (flash.writeWord(0, pre_weld_time)) {
-    Serial.println("pre_weld_time write SUCCESS!");
+  if (flash.writeWord(0, weld_phase_amount)) {
+    Serial.println("weld_phase_amount write SUCCESS!");
   }
-  else {Serial.println("pre_weld_time write FAIL...");}
+  else {Serial.println("weld_phase_amount write FAIL...");}
 
   if (flash.writeWord(2, pause_time)) {
     Serial.println("pause_time write SUCCESS!");

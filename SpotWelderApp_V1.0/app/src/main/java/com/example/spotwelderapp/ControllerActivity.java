@@ -36,7 +36,7 @@ public class ControllerActivity extends AppCompatActivity {
     //SPP UUID. Look for it
     private final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     public Button uploadBtn, readBtn;
-    public EditText etPWeld, etPause, etWeld;
+    public EditText etPulse, etPause, etWeld;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class ControllerActivity extends AppCompatActivity {
 
         uploadBtn = (Button)findViewById(R.id.uploadButton);
         readBtn = (Button)findViewById(R.id.readButton);
-        etPWeld = (EditText)findViewById(R.id.etPreweld);
+        etPulse = (EditText)findViewById(R.id.etPulse);
         etPause = (EditText)findViewById(R.id.etPause);
         etWeld = (EditText)findViewById(R.id.etWeld);
         uploadBtn.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +117,7 @@ public class ControllerActivity extends AppCompatActivity {
             }
 
             // Get settings from text views, check ranges
-            String tempPWeld = etPWeld.getText().toString();
+            String tempPulse = etPulse.getText().toString();
             String tempPause = etPause.getText().toString();
             String tempWeld = etWeld.getText().toString();
 
@@ -127,7 +127,7 @@ public class ControllerActivity extends AppCompatActivity {
             }
 
             // Upload code = 200, then array string
-            String paramsArrayStr = "200:[" + tempPWeld + "," + tempPause + "," + tempWeld + "]";
+            String paramsArrayStr = "200:[" + tempPulse + "," + tempPause + "," + tempWeld + "]";
 
             // Send settings array
             try {
@@ -149,14 +149,14 @@ public class ControllerActivity extends AppCompatActivity {
     private boolean isSettingsOkay() {      // Checking welding parameters for upload
         Log.d(TAG, "isSettingsOkay: Checking setting values...");
         boolean functReturn = true;
-        String tempPWeldStr = etPWeld.getText().toString();
+        String tempPulseStr = etPulse.getText().toString();
         String tempPauseStr = etPause.getText().toString();
         String tempWeldStr = etWeld.getText().toString();
 
         // Check for empty editTexts
-        if (tempPWeldStr.isEmpty()){
-            Log.d(TAG, "isSettingsOkay: PWeld value empty");
-            etPWeld.setError("Field cannot be empty");
+        if (tempPulseStr.isEmpty()){
+            Log.d(TAG, "isSettingsOkay: Pulse value empty");
+            etPulse.setError("Field cannot be empty");
             functReturn = false;
         }
         if (tempPauseStr.isEmpty()){
@@ -173,14 +173,14 @@ public class ControllerActivity extends AppCompatActivity {
             return false;
         }
 
-        int tempPWeld = Integer.parseInt(etPWeld.getText().toString());
+        int tempPulse = Integer.parseInt(etPulse.getText().toString());
         int tempPause = Integer.parseInt(etPause.getText().toString());
         int tempWeld = Integer.parseInt(etWeld.getText().toString());
 
         // Check values
-        if (tempPWeld < 0 || tempPWeld > 999){
-            Log.d(TAG, "isSettingsOkay: PWeld value out of bounds");
-            etPWeld.setError("Value out of bounds");
+        if (tempPulse < 0 || tempPulse > 10){
+            Log.d(TAG, "isSettingsOkay: Pulse value out of bounds");
+            etPulse.setError("Value out of bounds");
             functReturn = false;
         }
         if (tempPause < 0 || tempPause > 999){
@@ -294,7 +294,7 @@ public class ControllerActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) //after the doInBackground, log
         {
-            etPWeld.setText(paramsArr[0]);
+            etPulse.setText(paramsArr[0]);
             etPause.setText(paramsArr[1]);
             etWeld.setText(paramsArr[2]);
             Toast.makeText(mContext, "Download successful!", Toast.LENGTH_SHORT).show();
