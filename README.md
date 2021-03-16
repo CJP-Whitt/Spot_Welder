@@ -7,8 +7,7 @@ Photos of build progression (Google photos): https://photos.app.goo.gl/j9NsPbFjY
 
 # Spot Welder Controller Android Application
 Android App for changing welding parameters to get ideal weld
-APK Download Link V1.0 --> https://drive.google.com/file/d/1htVNx_ge1Yk_lr5TKI7ORGdG_ZuVXLhm/view?usp=sharing
-
+APK Download Link V1.1 --> https://drive.google.com/file/d/1LjHpt89rQLZouo0MwVBHZ62kARO4WaJr/view?usp=sharing
 
 # Disclaimer!
 Do your research! I do not take responsibility for any issues you may encounter during your build if you attempt to make a spot welder. It is difficult and there are many roadblocks you must engineer your way through. Learning comes through failure and troubleshooting so get used to it now if you plan on doing more projects in the future.
@@ -70,7 +69,7 @@ The app connects to the BLE module connected to the arduino. It changes settings
 
 
 ## Arduino Details
-The arduino firmware controls the switch for the transformer based on the foot pedal and burst weld settings (3 part welding process), and it also holds the stored settings from previous use. The welding process has 3 parts, an initial short ON heating phase, then a short OFF phase and then to finish a long ON phase for completing the actual welding.
+The arduino firmware controls the switch for the transformer based on the foot pedal and burst weld settings (3 Welding Settings), and it also holds the stored settings from previous use. The welding process has 3 parts, how many pulses to weld with, how long to weld for each pulse and the pause in between pulses.
 
 
 
