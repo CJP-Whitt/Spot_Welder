@@ -4,6 +4,10 @@
 #include "wiring_private.h"
 
 /* Defs */
+#if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
+// Required for Serial on Zero based boards
+#define Serial SERIAL_PORT_USBVIRTUAL
+#endif
 #define FOOT_PIN     10  // Foot switch pin
 #define LED_R_PIN    11  // Led welding indicator pin
 #define LED_G_PIN    2   // Led armed indicator pin
@@ -22,21 +26,17 @@ int weld_time = 80;     // Recommended 20-100ms
 
 /* Bluetooth UART connection */
 Uart Serial2(&sercom4, A1, A2, SERCOM_RX_PAD_1, UART_TX_PAD_0); // A1(TX) on SERCOM4.0, A2(RX) on SERCOM4.1
-
 /* Flash serial controller through SPI1 (SERCOM1) */
-SPIFlash flash(SS1, &SPI1);  
-
+SPIFlash flash(SS1, &SPI1); 
 
 void setup() {
-  // Setting up storage device, Serial, and BT Serial (Serial2)
+  // Begin Serial connections
   Serial.begin(9600);
+  while(!Serial);
   Serial2.begin(9600);
+  while(!Serial2);
   
-  
-//
-//  #if defined (ARDUINO_ARCH_SAMD) || defined (__AVR_ATmega32U4__) || defined (ARCH_STM32) || defined (NRF5) || defined (ARDUINO_ARCH_ESP32)
-//    while (!Serial);
-//  #endif
+  flash.begin();
 
   delay(50);
   Serial.print(F("Initialising"));
@@ -50,8 +50,6 @@ void setup() {
     Serial.println(flash.error(VERBOSE));
   }
   
-  flash.begin();
-
   // Assign pins A1 & A2 to SERCOM functionality
   pinPeripheral(A1, PIO_SERCOM_ALT);
   pinPeripheral(A2, PIO_SERCOM_ALT);
