@@ -32,7 +32,7 @@ SPIFlash flash(SS1, &SPI1);
 void setup() {
   // Begin Serial connections
   Serial.begin(9600);
-  while(!Serial);
+  // while(!Serial);
   Serial2.begin(9600);
   while(!Serial2);
   
