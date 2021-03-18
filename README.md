@@ -71,7 +71,8 @@ The app connects to the BLE module connected to the arduino. It changes settings
 ## Arduino Details
 The arduino firmware controls the switch for the transformer based on the foot pedal and burst weld settings (3 Welding Settings), and it also holds the stored settings from previous use. The welding process has 3 parts, how many pulses to weld with, how long to weld for each pulse and the pause in between pulses.
 
-
+Warning!:
+- The "SPIMemory" library has some bugged verions so I would suggest using the 3.3.0 version. Otherwise the settings may not save on the flash chip.
 
 
 
